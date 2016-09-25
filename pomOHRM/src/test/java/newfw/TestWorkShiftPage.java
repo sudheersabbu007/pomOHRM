@@ -16,7 +16,7 @@ public class TestWorkShiftPage extends TestBase {
         dashboard = loginPage.login("Admin","admin");
        workShiftPage =  dashboard.goToWorkShiftPage();
         addWorkShiftPage = workShiftPage.commonItems.clickAddButton(AddWorkShiftPage.class);
-        addWorkShiftPage = addWorkShiftPage.addWorkShiftPage("EarlyMorning","06:00","15:45");
+        addWorkShiftPage = addWorkShiftPage.addWorkShiftPage("Early Morning","06:00","15:45");
         workShiftPage = addWorkShiftPage.commonItems.clickSaveButton(WorkShiftPage.class);
         Assert.assertTrue(dashboard.isElementDisplayedXpath("//div[@class='message success fadable']"));
         System.out.println("WorkShift added successfully");
